@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout tools:context=".MainActivity" android:layout_height="match_parent" android:layout_width="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView android:layout_height="500dp"
+               android:layout_width="500dp"
+               app:layout_constraintVertical_bias="0.654"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               android:id="@+id/avatars" tools:srcCompat="@tools:sample/avatars"/>
+
+    <Button android:layout_height="150dp"
+            android:layout_width="150dp"
+            app:layout_constraintVertical_bias="0.122"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" android:id="@+id/camera" app:layout_constraintHorizontal_bias="0.229" android:text="카메라"/>
+
+    <Button android:layout_height="150dp"
+            android:layout_width="150dp"
+            app:layout_constraintVertical_bias="0.122"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/picture"
+            android:text="사진"
+            android:layout_marginStart="100dp"
+            app:layout_constraintStart_toEndOf="@+id/camera"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
