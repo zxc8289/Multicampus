@@ -1,0 +1,1 @@
+D:\kotlinSamples\sample01\build\classes\kotlin\main\MainKt.class
