@@ -1,0 +1,39 @@
+package com.recipe.a.dto;
+
+public class RecipeDto {
+	private int RECIPESEQ;
+	private String RECIPETITLE;
+	
+	
+	public RecipeDto(int rECIPESEQ, String rECIPETITLE) {
+		super();
+		RECIPESEQ = rECIPESEQ;
+		RECIPETITLE = rECIPETITLE;
+	}
+
+
+	public int getRECIPESEQ() {
+		return RECIPESEQ;
+	}
+
+
+	public void setRECIPESEQ(int rECIPESEQ) {
+		RECIPESEQ = rECIPESEQ;
+	}
+
+
+	public String getRECIPETITLE() {
+		return RECIPETITLE;
+	}
+
+
+	public void setRECIPETITLE(String rECIPETITLE) {
+		RECIPETITLE = rECIPETITLE;
+	}
+
+
+	@Override
+	public String toString() {
+		return "RecipeDto [RECIPESEQ=" + RECIPESEQ + ", RECIPETITLE=" + RECIPETITLE + "]";
+	}
+}

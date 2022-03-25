@@ -1,0 +1,5 @@
+package com.recipe.a.dto;
+
+public class RecipeTestDto {
+
+}

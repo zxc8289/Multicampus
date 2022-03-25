@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+
+
+#banner
+{
+	color: white;
+}
+
+.banner-height
+{
+	height: 45em;
+}
+
+.banner-display
+{
+	display: flex;
+	flex-direction: column;
+}
+
+.banner-display > div:nth-child(1)
+{
+	flex-grow: 4;
+}
+
+.banner-display > div:nth-child(2)
+{
+	flex-grow: 0.5;
+}
+
+.banner-display > div:nth-child(3)
+{
+	flex-grow: 2;
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        
+<mapper namespace="Genrelist">
+
+<select id="genrelist" parameterType="weview.dto.ListDto" resultType="weview.dto.ListDto">
+	SELECT SEQ_MOVIE, TITLE, GENRE, DIRECTOR, COUNTRY, ACTOR, CREATED, AGE, RUNNINGTIME, STORY, RATE, TRAILER,POSTER
+	FROM MOVIE	
+</select>
+
+
+<select id="colist" resultType="weview.dto.ListDto">
+	SELECT *
+    FROM (SELECT TITLE, CREATED, COUNTRY, GENRE, RATE, POSTER FROM MOVIE WHERE GENRE = '코미디')
+    WHERE ROWNUM <![CDATA[ < ]]> 5
+</select>
+
+<select id="rolist" resultType="weview.dto.ListDto">
+	SELECT *
+    FROM (SELECT TITLE, CREATED, COUNTRY, GENRE, RATE, POSTER FROM MOVIE WHERE GENRE = '로맨스')
+    WHERE ROWNUM <![CDATA[ < ]]> 5
+</select>
+
+<select id="alist" resultType="weview.dto.ListDto">
+	SELECT *
+    FROM (SELECT TITLE, CREATED, COUNTRY, GENRE, RATE, POSTER FROM MOVIE WHERE GENRE = '액션')
+    WHERE ROWNUM <![CDATA[ < ]]> 5
+</select>
+
+<select id="sflist" resultType="weview.dto.ListDto">
+	SELECT *
+    FROM (SELECT TITLE, CREATED, COUNTRY, GENRE, RATE, POSTER FROM MOVIE WHERE GENRE = 'SF')
+    WHERE ROWNUM <![CDATA[ < ]]> 5
+</select>
+
+<select id="flist" resultType="weview.dto.ListDto">
+	SELECT *
+    FROM (SELECT TITLE, CREATED, COUNTRY, GENRE, RATE, POSTER FROM MOVIE WHERE GENRE = '판타지')
+    WHERE ROWNUM <![CDATA[ < ]]> 5
+</select>
+
+<select id="tlist" resultType="weview.dto.ListDto">
+	SELECT *
+    FROM (SELECT TITLE, CREATED, COUNTRY, GENRE, RATE, POSTER FROM MOVIE WHERE GENRE = '스릴러')
+    WHERE ROWNUM <![CDATA[ < ]]> 5
+</select>
+
+<!-- 장르페이지 안의 세부 장르 페이지 -->
+
+<!-- 코미디 페이지 안에 있는 코미디 리스트 -->
+<select id="coinlist" resultType="weview.dto.ListDto">
+	SELECT *
+    FROM (SELECT TITLE, CREATED, COUNTRY, GENRE, RATE, POSTER FROM MOVIE WHERE GENRE = '코미디')
+    WHERE ROWNUM <![CDATA[ < ]]> 11
+</select>
+
+<!-- 로맨스 페이지 안에 있는 로맨스 리스트 -->
+<select id="roinlist" resultType="weview.dto.ListDto">
+	SELECT *
+    FROM (SELECT TITLE, CREATED, COUNTRY, GENRE, RATE, POSTER FROM MOVIE WHERE GENRE = '로맨스')
+    WHERE ROWNUM <![CDATA[ < ]]> 11
+</select>
+
+<!-- 액션 페이지 안에 있는 액션 리스트 -->
+<select id="ainlist" resultType="weview.dto.ListDto">
+	SELECT *
+    FROM (SELECT TITLE, CREATED, COUNTRY, GENRE, RATE, POSTER FROM MOVIE WHERE GENRE = '액션')
+    WHERE ROWNUM <![CDATA[ < ]]> 11
+</select>
+
+<!-- SF 페이지 안에 있는 sf 리스트 -->
+<select id="sfinlist" resultType="weview.dto.ListDto">
+	SELECT *
+    FROM (SELECT TITLE, CREATED, COUNTRY, GENRE, RATE, POSTER FROM MOVIE WHERE GENRE = 'SF')
+    WHERE ROWNUM <![CDATA[ < ]]> 11
+</select>
+
+<!-- 판타지 페이지 안에 있는 판타지 리스트 -->
+<select id="finlist" resultType="weview.dto.ListDto">
+	SELECT *
+    FROM (SELECT TITLE, CREATED, COUNTRY, GENRE, RATE, POSTER FROM MOVIE WHERE GENRE = '판타지')
+    WHERE ROWNUM <![CDATA[ < ]]> 11
+</select>
+
+<!-- 스릴러 페이지 안에 있는 스릴러 리스트 -->
+<select id="tinlist" resultType="weview.dto.ListDto">
+	SELECT *
+    FROM (SELECT TITLE, CREATED, COUNTRY, GENRE, RATE, POSTER FROM MOVIE WHERE GENRE = '스릴러')
+    WHERE ROWNUM <![CDATA[ < ]]> 11
+</select>
+
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.recipe.a.dao.RecipeDao">
+
+<select id="countRecipe" resultType="Integer">
+	SELECT COUNT(*) FROM RECIPE
+</select>
+
+<insert id="uploadRecipe" parameterType="com.recipe.a.dto.RecipeDto">
+	<selectKey keyProperty="recipeSeq" resultType="int">
+		SELECT NEXTVAL('recipeSeq') SEQ FROM dual
+	</selectKey>
+	INSERT INTO Test(RECIPESEQ,RECIPETITLE, RECIPECONTENT, RECIPEBIGCATEGORY, RECIPESMALLCATEGORY, 
+				RECIPEGOODSTAG, RECIPEPRICE, RECIPERATING)
+	VALUES(recipeSeq, #{recipeTitle}, #{recipeContent}, #{recipeBigCategory}, #{recipeSmallCategory}, #{recipeGoodsTag}, #{recipePrice}, 0)
+	
+</insert>
+
+
+<insert id="uploadRecipeImg" parameterType="com.recipe.a.dto.RecipeDto">
+	INSERT INTO Test2(RECIPESEQ, PHOTOURL)
+	VALUES(#{photoSeq}, #{photoUrl})
+</insert>
+
+
+<select id="getOneRecipe" parameterType="Integer" resultType="com.recipe.a.dto.RecipeDto">
+	SELECT * FROM RECIPE WHERE RECIPE_SEQ=#{recipe_seq}
+</select>
+</mapper>

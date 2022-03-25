@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        
+<mapper namespace="Member">
+
+<insert id="addmember" parameterType="weview.dto.MemberDto">
+	INSERT INTO MEMBER(SEQ_USER ,ID, PWD, NAME, EMAIL, nickname, CREATEDATE, PROFILE, PROFILE2)
+	VALUES(SEQ_MEMBER.NEXTVAL, #{id}, #{pwd}, #{name}, #{email}, #{nickname}, (SELECT SYSDATE FROM DUAL), #{profile}, #{profile2})
+</insert>
+
+<select id="getId" parameterType="String" resultType="Integer">
+	SELECT COUNT(*)
+	FROM MEMBER
+	WHERE ID=#{id}
+</select>
+
+<select id="login" parameterType="weview.dto.MemberDto" resultType="weview.dto.MemberDto">
+	SELECT SEQ_USER, ID, NAME, EMAIL, NICKNAME, CREATEDATE, PROFILE
+	FROM MEMBER
+	WHERE ID=#{id} AND PWD=#{pwd}
+</select>
+
+<update id="update" parameterType="weview.dto.MemberDto">
+	UPDATE MEMBER
+	SET ID = #{id},
+		PWD = #{pwd},
+		NICKNAME = #{nickname}
+	WHERE SEQ_USER = #{seq_user}
+</update>
+</mapper>
+
+

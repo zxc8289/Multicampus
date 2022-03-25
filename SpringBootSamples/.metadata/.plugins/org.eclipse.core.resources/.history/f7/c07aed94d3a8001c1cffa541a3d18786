@@ -1,0 +1,27 @@
+package com.recipe.a.dto;
+
+public class RecipeDto {
+	
+	private String RECIPETITLE;
+
+	public RecipeDto(String RECIPETITLE) {
+		super();
+		this.RECIPETITLE = RECIPETITLE;
+	}
+
+	public String getRecipetitle() {
+		return RECIPETITLE;
+	}
+
+	public void setRecipetitle(String recipetitle) {
+		this.RECIPETITLE = recipetitle;
+	}
+
+	@Override
+	public String toString() {
+		return "RecipeDto [recipetitle=" + recipetitle + "]";
+	}
+	
+	
+	
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMethod"/>
+    <fullyQualifiedTypeName name="mul.camp.a.dto.MemberDto"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+    <fullyQualifiedTypeName name="mul.camp.a.dao.BbsDao"/>
+    <fullyQualifiedTypeName name="mul.camp.a.service.BbsService"/>
+    <fullyQualifiedTypeName name="java.sql.Date"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="mul.camp.a.dto.BbsParam"/>
+    <fullyQualifiedTypeName name="mul.camp.a.dto.BbsDto"/>
+    <fullyQualifiedTypeName name="mul.camp.a.dto.BbsComentDto"/>
+    <fullyQualifiedTypeName name="mul.camp.a.dao.BbsCommentDao"/>
+    <fullyQualifiedTypeName name="mul.camp.a.service.BbsCommentService"/>
+    <fullyQualifiedTypeName name="mul.camp.a.service.copy.MemberService"/>
+    <fullyQualifiedTypeName name="mul.camp.a.service.MemberService"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
+    <fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JsonProperty"/>
+    <fullyQualifiedTypeName name="org.springframework.boot.jdbc.metadata.HikariDataSourcePoolMetadata"/>
+    <fullyQualifiedTypeName name="com.zaxxer.hikari.HikariConfig"/>
+    <fullyQualifiedTypeName name="com.recipe.a.dto.RecipeTestDto"/>
+    <fullyQualifiedTypeName name="com.recipe.a.dto.RecipeDto"/>
+    <fullyQualifiedTypeName name="com.recipe.a.dao.PaymentDao"/>
+    <fullyQualifiedTypeName name="com.recipe.a.dto.PhotoDto"/>
+</qualifiedTypeNameHistroy>

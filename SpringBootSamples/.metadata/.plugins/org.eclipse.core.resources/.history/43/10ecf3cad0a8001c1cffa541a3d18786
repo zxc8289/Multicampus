@@ -1,0 +1,92 @@
+package com.recipe.a.dto;
+
+public class RecipeTestDto {
+	private int recipeseq;
+	private String recipetitle;
+	private String recipecontent;
+	private String recipebigcategory;
+	private String recipesmallcategory;
+	private String recipegoodstag;
+	
+	
+	public RecipeTestDto(int recipeseq, String recipetitle, String recipecontent, String recipebigcategory,
+			String recipesmallcategory, String recipegoodstag) {
+		super();
+		this.recipeseq = recipeseq;
+		this.recipetitle = recipetitle;
+		this.recipecontent = recipecontent;
+		this.recipebigcategory = recipebigcategory;
+		this.recipesmallcategory = recipesmallcategory;
+		this.recipegoodstag = recipegoodstag;
+	}
+
+
+	public int getRecipeseq() {
+		return recipeseq;
+	}
+
+
+	public void setRecipeseq(int recipeseq) {
+		this.recipeseq = recipeseq;
+	}
+
+
+	public String getRecipetitle() {
+		return recipetitle;
+	}
+
+
+	public void setRecipetitle(String recipetitle) {
+		this.recipetitle = recipetitle;
+	}
+
+
+	public String getRecipecontent() {
+		return recipecontent;
+	}
+
+
+	public void setRecipecontent(String recipecontent) {
+		this.recipecontent = recipecontent;
+	}
+
+
+	public String getRecipebigcategory() {
+		return recipebigcategory;
+	}
+
+
+	public void setRecipebigcategory(String recipebigcategory) {
+		this.recipebigcategory = recipebigcategory;
+	}
+
+
+	public String getRecipesmallcategory() {
+		return recipesmallcategory;
+	}
+
+
+	public void setRecipesmallcategory(String recipesmallcategory) {
+		this.recipesmallcategory = recipesmallcategory;
+	}
+
+
+	public String getRecipegoodstag() {
+		return recipegoodstag;
+	}
+
+
+	public void setRecipegoodstag(String recipegoodstag) {
+		this.recipegoodstag = recipegoodstag;
+	}
+
+
+	@Override
+	public String toString() {
+		return "RecipeTestDto [recipeseq=" + recipeseq + ", recipetitle=" + recipetitle + ", recipecontent="
+				+ recipecontent + ", recipebigcategory=" + recipebigcategory + ", recipesmallcategory="
+				+ recipesmallcategory + ", recipegoodstag=" + recipegoodstag + "]";
+	}
+
+	
+}

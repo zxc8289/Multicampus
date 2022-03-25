@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        
+<mapper namespace="Manager">
+
+<select id="mlogin" parameterType="mul.camp.a.dto.ManagerDto" resultType="mul.camp.a.dto.ManagerDto">
+	SELECT ID, NAME, EMAIL, AUTH
+	FROM MANAGER
+	WHERE ID=#{id} AND PWD=#{pwd}
+</select>
+
+</mapper>

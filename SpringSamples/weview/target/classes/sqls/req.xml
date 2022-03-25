@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        
+
+        <mapper namespace="Req">
+        
+        <select id="reqlist" resultType="weview.dto.ReqDto">
+        	SELECT SEQ_REQUEST, ID, TITLE, CONTENT,  TO_CHAR(CREATED, 'YYYY-MM-DD') AS CREATED
+        	FROM REQUEST
+        	ORDER BY SEQ_REQUEST DESC
+        </select>
+        
+        
+        <insert id="writereq" parameterType="weview.dto.ReqDto">
+        INSERT INTO REQUEST(SEQ_REQUEST, ID, TITLE, CONTENT, CREATED)
+        VALUES(SEQ_REQUEST.NEXTVAL, #{id}, #{title}, #{content}, SYSDATE)
+        </insert>
+        
+        
+        <select id="getSeq" parameterType="Integer" resultType="weview.dto.ReqDto">
+        	SELECT SEQ_REQUEST, ID, TITLE, CONTENT, TO_CHAR(CREATED, 'YYYY-MM-DD HH:MI:SS') AS CREATED
+			FROM REQUEST
+			WHERE SEQ_REQUEST=#{seq}
+        </select>
+        
+        
+        <update id="update" parameterType="weview.dto.ReqDto">
+        	UPDATE REQUEST
+        	SET TITLE=#{title}, CONTENT=#{content}
+        	WHERE SEQ_REQUEST=#{seq_request}
+        </update>
+        
+<!--      
+        <delete id="delete" parameterType="Integer">
+        	DELETE
+        	FROM REQUEST
+        	WHERE SEQ_REQUEST=#{seq_request}
+        </delete>
+ -->          
+        
+        </mapper>
+        

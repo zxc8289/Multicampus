@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        
+<mapper namespace="OrderTable">
+	<select id="orderByScore" resultType="weview.dto.MainDto">
+		SELECT *
+		FROM (SELECT TITLE, CREATED, COUNTRY, GENRE, RATE, POSTER, SEQ_MOVIE FROM MOVIE ORDER BY RATE DESC)
+		WHERE ROWNUM <![CDATA[ < ]]> 5
+	</select>
+	<select id="orderByDate" resultType="weview.dto.MainDto">
+		SELECT *
+		FROM (SELECT TITLE, CREATED, COUNTRY, GENRE, RATE, POSTER, SEQ_MOVIE FROM MOVIE ORDER BY CREATED DESC)
+		WHERE ROWNUM <![CDATA[ < ]]> 5
+	</select>
+	<select id="orderByRunningTime" resultType="weview.dto.MainDto">
+		SELECT *
+		FROM (SELECT TITLE, CREATED, COUNTRY, GENRE, RATE, POSTER, RUNNINGTIME, SEQ_MOVIE FROM MOVIE ORDER BY RUNNINGTIME DESC)
+		WHERE ROWNUM <![CDATA[ < ]]> 5
+	</select>
+</mapper>

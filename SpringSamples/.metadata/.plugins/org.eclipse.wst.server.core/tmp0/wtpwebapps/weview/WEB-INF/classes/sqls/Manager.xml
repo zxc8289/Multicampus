@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        
+        <mapper namespace="Mana">
+        
+        <insert id="writemana" parameterType="weview.dto.ManagerDto">
+        INSERT INTO MOVIE(SEQ_MOVIE, POSTER, POSTER2, TITLE, RATE, AGE, GENRE, COUNTRY, RUNNINGTIME, CREATED, DIRECTOR, ACTOR, TRAILER, STORY)
+        VALUES(SEQ_MOVIE.NEXTVAL, #{poster}, #{poster2}, #{title}, #{rate}, #{age}, #{genre}, #{country}, #{runningtime}, #{created}, #{director}, #{actor}, #{trailer}, #{story})
+        </insert>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        </mapper>
